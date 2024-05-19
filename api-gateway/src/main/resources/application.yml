@@ -1,0 +1,29 @@
+server:
+  port:
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id:
+          uri:
+          predicates:
+            - Path=/api/{api_url}
+
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+
+dubbo:
+  application:
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address:

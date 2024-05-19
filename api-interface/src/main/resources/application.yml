@@ -1,0 +1,10 @@
+server:
+  port:
+  servlet:
+    context-path: /api
+
+
+api:
+  client:
+    access-key:
+    secret-key:
